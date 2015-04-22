@@ -1,0 +1,65 @@
+\section{Sean's Scratch Work}
+
+\begin{figure*}
+    \begin{center}
+        \begin{tabular}{lclllrr}
+            \hline
+            \textbf{Method} & \textbf{Phrase} & \textbf{Train} & \textbf{Tune} &
+            \textbf{Test} & \textbf{BLEU-c} & \textbf{BLEU} \\
+            \hline
+            Small baseline & 5 & Europarl 10k & Newsdev 1k & Goodnews full &
+            7.00 & 7.17 \\
+            \hline
+            Small hard stemming & 5 & Europarl 10k & Newsdev 1k & Goodnews full
+            & 4.04 & 5.13 \\
+            Small hybrid (hard+chars) & 10 & Europarl 10k & Newsdev 1k & Goodnews full & 2.16
+            & 3.37 \\
+            Small default Morfessor & 6 & Europarl 10k & Newsdev 1k & Goodnews
+            full & 5.07 & 5.23 \\
+            \hline
+            Medium baseline & 5 & Europarl full & Newsdev full & Goodnews full &
+            13.65 & 14.27 \\
+            Medium baseline & 8 & Europarl full & Newsdev full & Goodnews full &
+            12.88 & 13.55 \\
+            \hline
+            Medium default Morfessor & 6 & Europarl full & Newsdev full &
+            Goodnews full & 10.97 & 11.82 \\
+            Medium default Morfessor & 8 & Europarl full & Newsdev full &
+            Goodnews full & 11.76 & 12.66 \\
+            Medium $\alpha=0.5$ Morfessor & 8 & Europarl full & Newsdev full &
+            Goodnews full & 11.99 & 12.66 \\
+            Medium $\alpha=1.0$ Morfessor & 8 & Europarl full & Newsdev full &
+            Goodnews full & 11.73 & 12.42\\
+            Medium Finlist Morfessor & 8 & Europarl full & Newsdev full &
+            Goodnews full & 11.85 & 13.35 \\
+            \hline
+        \end{tabular}
+    \caption{Results from the development stage with Goodnews testing data.}
+    \label{fig:sean-dev}
+    \end{center}
+\end{figure*}
+
+\begin{figure*}
+    \begin{center}
+        \begin{tabular}{lclllrr}
+            \hline
+            \textbf{Method} & \textbf{Phrase} & \textbf{Train} & \textbf{Tune} &
+            \textbf{Test} & \textbf{BLEU-c} & \textbf{BLEU} \\
+            \hline
+            Baseline & 5 & Europarl & Newsdev & Newstest 2015 &
+            0.00 & 0.00 \\
+            \hline
+        \end{tabular}
+    \caption{Results from the testing stage with Newstest2015 testing data.}
+    \label{fig:sean-test}
+    \end{center}
+\end{figure*}
+
+700MB, 6.8 million sentence-language model used for all experiments in the
+development stage.
+
+In the testing stage, we used a 5- or 6-gram KenLM language model trained on
+English gigaword v5 and tested on the released 2015 testing data.
+
+Fig~\ref{fig:sean-dev} shows the results from development testing.
+Fig~\ref{fig:sean-test} shows the results from actual testing.
