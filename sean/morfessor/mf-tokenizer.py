@@ -2,7 +2,7 @@ import morfessor
 import sys
 
 io = morfessor.MorfessorIO()
-model = io.read_binary_model_file('/home/massung1/mf-model.bin')
+model = io.read_binary_model_file(sys.argv[1])
 
 for line in sys.stdin:
     output = ""
