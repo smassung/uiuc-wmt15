@@ -22,6 +22,10 @@ have been generated correctly. Using the large LM should increase the BLEU
 score. It doesn't for Finnish, but perhaps that's because the translation model
 is just too bad to even get close to a fluent English version.
 
+If for some reason Moses looks for the LM in its lm/ directory and can't find
+it, you can just symlink it there from the NAS. Not sure why this happens when
+you specify a premade LM.
+
 ## Installing Morfessor
 
 Run these commands
